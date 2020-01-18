@@ -84,6 +84,13 @@ public class DubboHttpController {
 			return new ResponseEntity<String>(HttpStatus.NOT_FOUND);
 		}
 		String[] parameterNames = NameDiscover.parameterNameDiscover.getParameterNames(method);
+		if (null==parameterNames) {
+			int paramLength = method.getParameters().length;
+			parameterNames = new String[paramLength];
+			for (int i=0; i<paramLength; i++) {
+				parameterNames[i] = method.getParameters()[i].getName();
+			}
+		}
 		
 		logger.info("[Swagger-dubbo] Invoke by " + cluster);
 		if (CLUSTER_RPC.equals(cluster)){
