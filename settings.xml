@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <servers>
+        <server>
+            <username>jedi</username>
+            <password>jedi@jedi</password>
+            <id>jedi-repo</id>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <repositories>
+                <repository>
+                    <id>jedi-repo</id>
+                    <name>libs-release</name>
+                    <url>http://123.57.37.231:18081/artifactory</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>jedi-repo</id>
+                    <name>plugins-release</name>
+                    <url>http://123.57.37.231:18081/artifactory</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <id>jedi-repo</id>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>artifactory</activeProfile>
+    </activeProfiles>
+</settings>

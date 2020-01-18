@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.deepoove</groupId>
 		<artifactId>swagger-dubbo-project</artifactId>
-		<version>2.0.1</version>
+		<version>2.0.1.1</version>
 	</parent>
 	<artifactId>swagger-dubbo</artifactId>
 	<packaging>jar</packaging>
@@ -120,5 +120,16 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>snapshots</name>
+			<url>http://123.57.37.231:18081/artifactory/jedi-repo</url>
+		</snapshotRepository>
+		<repository>
+			<id>central</id>
+			<name>releases</name>
+			<url>http://123.57.37.231:18081/artifactory/jedi-repo</url>
+		</repository>
+	</distributionManagement>
 </project>
